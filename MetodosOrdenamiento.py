@@ -2,9 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Sep 14 11:52:04 2026
-
-@author: j
 """
+import random as rn
 
 def metodo_burbuja(lista):
     for i in range (1,len(lista)):
@@ -71,15 +70,16 @@ def metodo_mezcla(lista):
             
         
 def metodo_quicksort(lista):
-    import random as rn
+    
     if(len(lista) <= 1):
         return lista
     else:
         indice_pivote = rn.randint(0, len(lista)-1)
         pivote = lista[indice_pivote]
         sobrante = lista[:indice_pivote] + lista[indice_pivote+1:]
-        menores_pivote = [i for i in sobrante if i <= pivote]
+        menores_pivote = [i for i in sobrante if i < pivote]
+        iguales_pivote = [x for x in lista if x == pivote]
         mayores_pivote = [i for i in sobrante if i > pivote]
-        return metodo_quicksort(menores_pivote) + [pivote] + metodo_quicksort(mayores_pivote)
+        return metodo_quicksort(menores_pivote) + iguales_pivote + metodo_quicksort(mayores_pivote)
     
         

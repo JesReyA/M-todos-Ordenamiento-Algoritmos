@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Sep 18 11:50:26 2026
-
-@author: j
 """
 
 import pandas as pd
