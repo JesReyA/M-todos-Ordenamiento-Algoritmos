@@ -17,6 +17,6 @@ if __name__=="__main__":
     plt.xlabel("N")
     plt.ylabel("Tiempo")
     plt.title("Burbuja Vs Insercion")
-    plt.legend(('burbuja', 'insersion'),prop={'size':10},loc='upper right')
+    plt.legend(('burbuja', 'insercion'),prop={'size':10},loc='upper right')
     plt.grid()
     plt.show()
