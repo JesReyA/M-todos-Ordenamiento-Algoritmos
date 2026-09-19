@@ -4,7 +4,7 @@
 Created on Mon Sep 14 11:57:22 2026
 """
 
-import MetodosOrdenamiento
+import metodos_ordenamiento
 import random as rn
 from time import time
 
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     for i in range(100, 10010, 100):
         lista_burbuja = lista[:i]
         inicio_tiempo=time()
-        MetodosOrdenamiento.metodo_burbuja(lista_burbuja)
+        metodos_ordenamiento.metodo_burbuja(lista_burbuja)
         transcurrido=time()-inicio_tiempo
         archivo_burbuja.write(str(i) + ";" +format(transcurrido, '.5f')+"\n")
         archivo_burbuja.flush()
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     for i in range(100, 10010, 100):
         lista_insercion = lista[:i]
         inicio_tiempo=time()
-        MetodosOrdenamiento.metodo_insercion(lista_insercion)
+        metodos_ordenamiento.metodo_insercion(lista_insercion)
         transcurrido=time()-inicio_tiempo
         archivo_insercion.write(str(i) + ";" +format(transcurrido, '.5f')+"\n")
         archivo_insercion.flush()
@@ -47,7 +47,7 @@ if __name__ == "__main__":
     for i in range(100, 10010, 100):
         lista_seleccion = lista[:i]
         inicio_tiempo=time()
-        MetodosOrdenamiento.metodo_seleccion(lista_seleccion)
+        metodos_ordenamiento.metodo_seleccion(lista_seleccion)
         transcurrido=time()-inicio_tiempo
         archivo_seleccion.write(str(i) + ";" +format(transcurrido, '.5f')+"\n")
         archivo_seleccion.flush()
@@ -59,7 +59,7 @@ if __name__ == "__main__":
     for i in range(100, 10010, 100):
         lista_mezcla = lista[:i]
         inicio_tiempo=time()
-        MetodosOrdenamiento.metodo_mezcla(lista_mezcla)
+        metodos_ordenamiento.metodo_mezcla(lista_mezcla)
         transcurrido=time()-inicio_tiempo
         archivo_mezcla.write(str(i) + ";" +format(transcurrido, '.5f')+"\n")
         archivo_mezcla.flush()
@@ -71,7 +71,7 @@ if __name__ == "__main__":
     for i in range(100, 10010, 100):
         lista_quicksort =lista[:i]
         inicio_tiempo=time()
-        lista_quicksort = MetodosOrdenamiento.metodo_quicksort(lista_quicksort)
+        lista_quicksort = metodos_ordenamiento.metodo_quicksort(lista_quicksort)
         transcurrido=time()-inicio_tiempo
         archivo_quicksort.write(str(i) + ";" +format(transcurrido, '.5f')+"\n")
         archivo_quicksort.flush()
